@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Ana & João vão casar!</title>
+
+    <script>
+        // change language
+        function changeLang(lang) {
+            elements = document.querySelectorAll(":not(html)[lang]");
+            for (let element of elements) element.style.display = 'none';
+
+            elements = document.querySelectorAll(`:not(html)[lang=${lang}]`);
+            for (let element of elements) element.style.display = 'block';
+
+            document.documentElement.setAttribute('lang', lang);
+        }
+
+        // light/dark mode
+        function changeLight(light) {
+            let darkColor = "#333";
+            let lightColor = "#f8f9fd";
+            let darkButton = "#dark";
+            let lightButton = "#light";
+            if (light) {
+                backgroundColor = lightColor;
+                fontColor = darkColor;
+                hide = lightButton;
+                show = darkButton;
+            } else {
+                backgroundColor = darkColor;
+                fontColor = lightColor;
+                hide = darkButton;
+                show = lightButton;
+            }
+            document.body.style.backgroundColor = backgroundColor;
+            let nav = document.getElementById("nav");
+            nav.style.background = "linear-gradient(" + backgroundColor + " 60%, rgba(255, 255, 255, 0))";
+            elements = document.querySelectorAll("p,h1,h2,h3,span");
+            for (let element of elements) element.style.color = fontColor;
+            document.querySelector(hide).style.display = 'none';
+            document.querySelector(show).style.display = 'block';
+        }
+
+        // responsive menu
+        function menu() {
+            var x = document.getElementById("nav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <section class="navigation">
+        <div>
+            <nav>
+                <ul class="topnav" id="nav">
+                    <li id="logo"><span>A ❤️ J</span></li> <!--TODO LOGO-->
+                    <li><a href="#invitation"><span>OMG</span></a></li>
+                    <li><a href="#dresscode"><span>Dresscode</span></a></li>
+                    <li><a href="#photos"><span lang="pt">Fotos</span><span lang="en">Photos</span></a></li>
+                    <li><a href="#map" class="login"><span lang="pt">Local</span><span lang="en">Venue</span></a></li>
+                    <li><a href="#rsvp"><span>RSVP</span></a></li>
+
+
+                    <li class="right" id="light" onclick="changeLight(true)" style="display:none"><a href="#">☀️</a>
+                    </li>
+                    <li class="right" id="dark" onclick="changeLight(false)"><a href="#">🌙</a></li>
+                    <li class="right" id="pt" onclick="changeLang('pt')" style="display:none" lang="en"><a
+                            href="#"><span>PT</span></a></li>
+                    <li class="right" id="en" onclick="changeLang('en')" lang="pt"><a href="#"><span>EN</span></a></li>
+                    <li id="menu"><a href="javascript:void(0);" class="icon" onclick="menu()"><span><i
+                                    class="fa fa-bars"></i></span></a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="top">
+        <div class="container">
+            <h1><span lang="pt">Vamos casar!</span><span lang="en">We're getting married!</span></h1>
+            <img src="img/undraw_wedding_re_66hj-removebg-preview.png" />
+        </div>
+    </section>
+    <footer>
+        <p><span lang="pt">Feito com ❤️ por Ana e João</span><span lang="en">Made with ❤️ by Ana & João</span></p>
+    </footer>
+</body>
+
+</html>
