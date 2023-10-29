@@ -11,32 +11,41 @@
 
     <script>
         // change language
-        function changeLang(lang) {
+        function toggleLang() {
+            let currentLang = document.documentElement.lang;
+            currentLang === "pt" ? currentLang = "en" : currentLang = "pt";
+
             elements = document.querySelectorAll(":not(html)[lang]");
             for (let element of elements) element.style.display = 'none';
 
-            elements = document.querySelectorAll(`:not(html)[lang=${lang}]`);
+            elements = document.querySelectorAll(`:not(html)[lang=${currentLang}]`);
             for (let element of elements) element.style.display = 'block';
 
-            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('lang', currentLang);
         }
 
         // light/dark mode //BUG TODO AFTER CHANGING MODE, LANG SHOWS IN MOBILE NAV
-        function changeLight(light) {
+        function toggleLight(element) {
+            console.log("start: " + element.classList);
             let darkColor = "#333";
             let lightColor = "#f8f9fd";
-            let darkButton = "#dark";
-            let lightButton = "#light";
-            if (light) {
+            let darkButton = ".dark";
+            let lightButton = ".light";
+            let swap;
+            if (element.classList.contains("dim")) {
                 backgroundColor = lightColor;
                 fontColor = darkColor;
-                hide = lightButton;
-                show = darkButton;
-            } else {
-                backgroundColor = darkColor;
-                fontColor = lightColor;
                 hide = darkButton;
                 show = lightButton;
+                swap = "bright"
+                element.classList.remove("dim");
+            } else if (element.classList.contains("bright")) {
+                backgroundColor = darkColor;
+                fontColor = lightColor;
+                hide = lightButton;
+                show = darkButton;
+                swap = "dim";
+                element.classList.remove("bright");
             }
             document.body.style.backgroundColor = backgroundColor;
             let nav = document.getElementById("nav");
@@ -45,6 +54,8 @@
             for (let element of elements) element.style.color = fontColor;
             document.querySelector(hide).style.display = 'none';
             document.querySelector(show).style.display = 'block';
+            element.classList.add(swap);
+            console.log("end: " + element.classList);
         }
 
         // responsive menu
@@ -66,11 +77,16 @@
                 <a href="#map" class="login"><span lang="pt">Local</span><span lang="en">Venue</span></a>
                 <a href="#rsvp"><span>RSVP</span></a>
 
-                <a class="right" id="light" onclick="changeLight(true)" style="display:none" href="#">☀️</a>
+                <!--a class="right" id="light" onclick="changeLight(true)" style="display:none" href="#">☀️</a>
                 <a class="right" id="dark" onclick="changeLight(false)" href="#">🌙</a>
                 <a class="right" id="pt" onclick="changeLang('pt')" style="display:none" lang="en"
                     href="#"><span>PT</span></a>
-                <a class="right" id="en" onclick="changeLang('en')" lang="pt" href="#"><span>EN</span></a>
+                <a class="right" id="en" onclick="changeLang('en')" lang="pt" href="#"><span>EN</span></-->
+                <a class="right bright" onClick="toggleLight(this)" href="#"><span class="light">🌙</span><span
+                        class="dark">☀️</span></a>
+                <a class="right language" onClick="toggleLang()" href="#"><span lang="en">PT</span><span
+                        lang="pt">EN</span></a>
+
                 <a id="menu" href="javascript:void(0);" class="icon" onclick="menu()"><span><i
                             class="fa fa-bars"></i></span></a>
 
