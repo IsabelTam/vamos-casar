@@ -1,9 +1,9 @@
 body {
-    margin: 0px;
     font-family: "Open Sans", sans-serif;
     /*font-weight: 300;*/
     color: #333;
     background-color: #f8f9fd;
+    margin: 0;
 }
 
 span[lang=en] {
@@ -21,86 +21,72 @@ h1 {
     font-size: 60px
 }
 
-li {
-    display: inline;
-}
-
-ul {
+.topnav {
+    overflow: hidden;
+    line-height: 1.5;
     position: fixed;
     top: 0;
     width: 100%;
-}
-
-.topnav {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
     background: linear-gradient(#f8f9fd 70%, rgba(255, 255, 255, 0))
 }
 
-.topnav li {
+.topnav a {
     float: left;
-    line-height: 1.5;
     display: block;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
-}
-
-.topnav li a {
-    color: #333;
     text-decoration: none;
+    font-size: 17px;
 }
 
-.topnav li.right {
+.topnav a.right {
     float: right;
 }
 
-.topnav li.split {
-    float: right;
-}
-
-#menu {
+.topnav .icon {
     display: none;
 }
 
-@media screen and (max-width: 620px) {
-    .topnav li {
-        display: none;
-    }
+.hide {
+    display: none;
+}
 
-    #logo {
-        display: block;
-        float: left;
-    }
-
-    #menu {
-        float: right;
-        display: block;
-    }
+.show {
+    display: block;
 }
 
 @media screen and (max-width: 620px) {
-    .topnav.responsive {
-        display: block;
-        position: relative;
+    .topnav a:not(:first-child) {
+        display: none;
     }
 
-    #menu {
-        background: inherit;
+    .topnav a.icon {
+        display: block;
         position: absolute;
         right: 0;
         top: 0;
     }
 
-    .topnav.responsive li {
+    .topnav.responsive {
+        position: fixed;
+        overflow: scroll;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
         float: none;
         display: block;
-        text-align: center;
+        text-align: left;
     }
 }
 
 .container {
-    margin-top: 20px;
+    padding-top: 20px;
     text-align: center;
 }

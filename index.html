@@ -21,7 +21,7 @@
             document.documentElement.setAttribute('lang', lang);
         }
 
-        // light/dark mode
+        // light/dark mode //BUG TODO AFTER CHANGING MODE, LANG SHOWS IN MOBILE NAV
         function changeLight(light) {
             let darkColor = "#333";
             let lightColor = "#f8f9fd";
@@ -49,12 +49,7 @@
 
         // responsive menu
         function menu() {
-            var x = document.getElementById("nav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+            document.getElementById("nav").classList.toggle("responsive");
         }
     </script>
 
@@ -62,30 +57,25 @@
 
 <body>
     <section class="navigation">
-        <div>
-            <nav>
-                <ul class="topnav" id="nav">
-                    <li id="logo"><span>A ❤️ J</span></li> <!--TODO LOGO-->
-                    <li><a href="#invitation"><span>OMG</span></a></li>
-                    <li><a href="#dresscode"><span>Dresscode</span></a></li>
-                    <li><a href="#photos"><span lang="pt">Fotos</span><span lang="en">Photos</span></a></li>
-                    <li><a href="#map" class="login"><span lang="pt">Local</span><span lang="en">Venue</span></a></li>
-                    <li><a href="#rsvp"><span>RSVP</span></a></li>
+        <nav>
+            <div class="topnav" id="nav">
+                <a><span>A ❤️ J</span></a>
+                <a href="#invitation"><span>OMG</span></a>
+                <a href="#dresscode"><span>Dresscode</span></a>
+                <a href="#photos"><span lang="pt">Fotos</span><span lang="en">Photos</span></a>
+                <a href="#map" class="login"><span lang="pt">Local</span><span lang="en">Venue</span></a>
+                <a href="#rsvp"><span>RSVP</span></a>
 
+                <a class="right" id="light" onclick="changeLight(true)" style="display:none" href="#">☀️</a>
+                <a class="right" id="dark" onclick="changeLight(false)" href="#">🌙</a>
+                <a class="right" id="pt" onclick="changeLang('pt')" style="display:none" lang="en"
+                    href="#"><span>PT</span></a>
+                <a class="right" id="en" onclick="changeLang('en')" lang="pt" href="#"><span>EN</span></a>
+                <a id="menu" href="javascript:void(0);" class="icon" onclick="menu()"><span><i
+                            class="fa fa-bars"></i></span></a>
 
-                    <li class="right" id="light" onclick="changeLight(true)" style="display:none"><a href="#">☀️</a>
-                    </li>
-                    <li class="right" id="dark" onclick="changeLight(false)"><a href="#">🌙</a></li>
-                    <li class="right" id="pt" onclick="changeLang('pt')" style="display:none" lang="en"><a
-                            href="#"><span>PT</span></a></li>
-                    <li class="right" id="en" onclick="changeLang('en')" lang="pt"><a href="#"><span>EN</span></a></li>
-                    <li id="menu"><a href="javascript:void(0);" class="icon" onclick="menu()"><span><i
-                                    class="fa fa-bars"></i></span></a>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </section>
     <section class="top">
         <div class="container">
