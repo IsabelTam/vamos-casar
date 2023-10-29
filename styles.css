@@ -52,10 +52,6 @@ ul {
     text-decoration: none;
 }
 
-.topnav li:not(:first-child):hover:not(.active) {
-    background: radial-gradient(#888, rgba(255, 255, 255, 0) 70%);
-}
-
 .topnav li.right {
     float: right;
 }
@@ -101,10 +97,6 @@ ul {
         float: none;
         display: block;
         text-align: center;
-    }
-
-    .topnav.responsive li:not(:first-child):hover:not(.active) {
-        background: none;
     }
 }
 
