@@ -1,8 +1,8 @@
 body {
     font-family: "Open Sans", sans-serif;
     /*font-weight: 300;*/
-    color: #333;
-    background-color: #f8f9fd;
+    color: #f8f9fd;
+    background-color: #333;
     margin: 0;
 }
 
@@ -10,14 +10,14 @@ span[lang=en] {
     display: none
 }
 
-.dark {
+.light {
     display: none;
 }
 
 p {
     font-size: 15px;
     line-height: 29px;
-    color: #333;
+    color: #f8f9fd;
     padding-bottom: 20px
 }
 
@@ -31,13 +31,13 @@ h1 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(#f8f9fd 70%, rgba(255, 255, 255, 0))
+    background: linear-gradient(#333 70%, rgba(255, 255, 255, 0))
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: #333;
+    color: #f8f9fd;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
