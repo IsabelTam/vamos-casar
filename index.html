@@ -28,34 +28,6 @@
 
         // toggle light/dark mode
         function toggleLight() {
-            /*let darkColor = "#333";
-            let lightColor = "#f8f9fd";
-            let darkButton = ".dark";
-            let lightButton = ".light";
-            let swap;
-            if (element.classList.contains("dim")) {
-                backgroundColor = lightColor;
-                fontColor = darkColor;
-                hide = darkButton;
-                show = lightButton;
-                swap = "bright"
-                element.classList.remove("dim");
-            } else if (element.classList.contains("bright")) {
-                backgroundColor = darkColor;
-                fontColor = lightColor;
-                hide = lightButton;
-                show = darkButton;
-                swap = "dim";
-                element.classList.remove("bright");
-            }
-            document.body.style.backgroundColor = backgroundColor;
-            let nav = document.getElementById("nav");
-            nav.style.background = "linear-gradient(" + backgroundColor + " 60%, rgba(255, 255, 255, 0))";
-            elements = document.querySelectorAll("p,h1,h2,h3,span");
-            for (let element of elements) element.style.color = fontColor;
-            document.querySelector(hide).style.display = 'none';
-            document.querySelector(show).style.display = 'block';
-            element.classList.add(swap);*/
             const darkTheme = document.body.classList.contains("dark-theme");
             document.body.classList.toggle("dark-theme");
             localStorage.setItem("theme", darkTheme ? "light" : "dark");
@@ -64,6 +36,10 @@
         // responsive menu
         function menu() {
             document.getElementById("nav").classList.toggle("responsive");
+        }
+
+        function RSVP() {
+            console.log("boop");
         }
     </script>
 
@@ -97,10 +73,9 @@
             </p>
         </div>
     </section>
-    <section id="invitation" class="section-padding">
-        <div class="container">
-            <img id="flower-frame" src="img/flowers-6615871_1280.png">
-            <div class="top-center">
+    <div id="content">
+        <section id="invitation" class="section-padding">
+            <div class="container">
                 <h2><span lang="pt">Já estava na hora, não é?</span><span lang="en">Kept you waiting
                         hm?</span></h2>
                 <p><span lang="pt">Vem celebrar connosco a <b>10 de Fevereiro de 2024</b> no <b>Pavilhão do
@@ -108,73 +83,83 @@
                     <span lang="en">Come celebrate with us on <b>February 10<sup>th</sup> 2024</b> at the
                         <b>Pavilion of Knowledge</b> starting at <b>11:30</b></span>
                 </p>
+                <button class="calendar"><i class="fa fa-calendar"></i><a
+                        href="https://calendar.google.com/calendar/r/eventedit?text=Casamento%20Ana%20%26%20Jo%C3%A3o&location=Pavilh%C3%A3o%20do%20Conhecimento%20-%20Ci%C3%AAncia%20Viva%2C%20Largo%20Jos%C3%A9%20Mariano%20Gago%20n%C2%BA1%2C%201990-073%20Lisboa%2C%20Portugal&dates=20230210T113000%2F20230210T183000&ctz=Europe%2FLisbon">
+                        <span lang="pt"> Guardar no calendário</span><span lang="en"> Save to
+                            calendar</span></a></button>
+                <!--img id="flower-frame"
+                    src="img/euclidean-vector-painting-flower-blue-vector-hand-painted-blue-flowers-5390e023fbbc0a3534d054889b19d44f.png"-->
             </div>
-            <!--img src="img/space-8154941_1280.png"-->
-        </div>
+        </section>
 
-    </section>
+        <section id="dresscode" class="section-padding">
+            <div class="container">
+                <img id="blob" src="img/space-8154941_1280.png">
+                <div class="blob-text">
+                    <h2><span lang="pt">Ugh... Dresscode?</span><span lang="en">Ugh... Dresscode?</span></h2>
+                    <p>
+                        <span lang="pt">E que tal não?<br>Queres ir chique? Casamentos são para isso!<br>Não
+                            gostas de ir formal? Tens o nosso OK. <br>Até mascarado podes vir, só pedimos:</span>
+                        <span lang="en">How about no?<br>Want to be fancy? That's what weddings are for!<br>Don't want
+                            to go formal? You have our a-OK.<br>Cosplays, costumes, whatever, only two rules
+                            apply:</span><br>
+                        <b><span lang="pt">Não vir completamente de branco.</span><span lang="en">Don't wear all
+                                white.</span></b><br>
+                        <b><span lang="pt">Roupa apropriada para todas as idades.</span><span lang="en">Outfit is
+                                appropriate for all ages.</span></b>
+                    </p>
+                </div>
+            </div>
 
-    <section id="dresscode" class="section-padding">
-        <div class="container">
-            <img id="blob" src="img/space-8154941_1280.png">
-            <div class="blob-text">
-                <h2><span lang="pt"></span>Ugh... Dresscode?</span><span lang="en">Ugh... Dresscode?</span></h2>
-                <p>
-                    <span lang="pt">E que tal não?<br>Queres ir chique? Casamentos são para isso!<br>Não
-                        gostas de ir formal? Tens o nosso OK. <br>Até mascarado podes vir, só pedimos:</span>
-                    <span lang="en">How about no?<br>Want to be fancy? That's what weddings are for!<br>Don't want to go
-                        formal? You have our a-OK.<br>Cosplays, costumes, whatever, only two rules apply:</span>
-                <ul>
-                    <li><b><span lang="pt">Não vir completamente de branco.</span><span lang="en">Don't wear all
-                                white.</span></b></li>
-                    <li><b><span lang="pt">Roupa apropriada para todas as idades.</span><span lang="en">Outfit is
-                                appropriate for all ages.</span></b></li>
-                </ul>
+        </section>
+
+        <section id="photos" class="section-padding">
+            <div class="container">
+                <h2><span lang="pt">Ajuda-nos a capturar este momento!</span><span lang="en">Help us capture the
+                        moment!</span></h2>
+                <p><span lang="pt">Descarrega <a href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">aqui</a>
+                        a
+                        aplicação Wedshoots e coloca o código PT5e0005a7</span><span lang="en">Download <a
+                            href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">here</a> the Wedshoots
+                        app and input the code PT5e0005a7</span></p>
+            </div>
+        </section>
+
+        <section id="map" class="section-padding">
+            <div class="container">
+                <h2><span lang="pt">Como chegar lá?</span><span lang="en">How do I get there?</span></h2>
+                <p><span lang="pt">É mais fácil do que pensas!</span><span lang="en">It's way easier than you
+                        think!</span>
                 </p>
+                <div map-responsive>
+                    <iframe id="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.0628325503835!2d-9.098446923324353!3d38.76226285466518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19318919abdcad%3A0x168901727e8b67c8!2sPavilh%C3%A3o%20do%20Conhecimento%20-%20Ci%C3%AAncia%20Viva!5e0!3m2!1sen!2spt!4v1698621487460!5m2!1sen!2spt"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
             </div>
-        </div>
+        </section>
 
-    </section>
-
-    <section id=" photos" class="section-padding">
-        <div class="container">
-            <h2><span lang="pt">Ajuda-nos a capturar este momento!</span><span lang="en">Help us capture the
-                    moment!</span></h2>
-            <p><span lang="pt">Descarrega <a href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">aqui</a>
-                    a
-                    aplicação Wedshoots e coloca o código PT5e0005a7</span><span lang="en">Download <a
-                        href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">here</a> the Wedshoots
-                    app and input the code PT5e0005a7</span></p>
-        </div>
-    </section>
-
-    <section id="map" class="section-padding">
-        <div class="container">
-            <h2><span lang="pt">Como chegar lá?</span><span lang="en">How do I get there?</span></h2>
-            <p><span lang="pt">É mais fácil do que pensas!</span><span lang="en">It's way easier than you
-                    think!</span>
-            </p>
-            <div map-responsive>
-                <iframe id="map-frame"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.0628325503835!2d-9.098446923324353!3d38.76226285466518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19318919abdcad%3A0x168901727e8b67c8!2sPavilh%C3%A3o%20do%20Conhecimento%20-%20Ci%C3%AAncia%20Viva!5e0!3m2!1sen!2spt!4v1698621487460!5m2!1sen!2spt"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section id="rsvp" class="section-padding">
+            <div class="container">
+                <h2><span lang="pt">Do que estás à espera?</span><span lang="en">What are you waiting for?</span></h2>
+                <p><span lang="pt">Por favor, confirma até 10 de Janeiro 2024</span><span lang="en">Please confirm
+                        before January 10<sup>th</sup> 2024</span></p>
+                <div id="rsvp-form">
+                    <iframe lang="pt"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSeQTrk0bMYmkTVjSOTAnsGoc6-XQbGiRuXlFlXOWl7vLsmSAw/viewform?embedded=true"
+                        width="640" height="1170" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe lang="en"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdEWlLA7nVSAsUMzRaI_pEJBFvGtEy8UuiAjotpCzrjROqLww/viewform?embedded=true"
+                        width="640" height="1170" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
             </div>
-
-        </div>
-    </section>
-
-    <section id="rsvp" class="section-padding">
-        <div class="container">
-            <h2><span lang="pt">Do que estás à espera?</span><span lang="en">What are you waiting for?</span></h2>
-            <p><span lang="pt">Agradeciamos RSVPs antes de 10 de Janeiro 2024</span><span lang="en">We would greatly
-                    appreciate if you could RSVP before 10<sup>th</sup> of January 2024</span></p>
-
-        </div>
-    </section>
-    <footer>
-        <p><span lang="pt">Feito com ❤️ por Ana e João</span><span lang="en">Made with ❤️ by Ana & João</span></p>
-    </footer>
+        </section>
+        <footer>
+            <p><span lang="pt">Feito com ❤️ por Ana e João</span><span lang="en">Made with ❤️ by Ana & João</span></p>
+        </footer>
+    </div>
 </body>
 <script>
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");

@@ -31,13 +31,9 @@ body.dark-theme .moon {
     display: none;
 }
 
-span[lang=en] {
+:not(html)[lang=en] {
     display: none
 }
-
-/*.light {
-    display: none;
-}*/
 
 a:hover {
     cursor: pointer;
@@ -48,12 +44,16 @@ p {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+}
+
+#content {
+    /*margin: 5px;*/
 }
 
 nav {
@@ -97,6 +97,14 @@ body.dark-theme .topnav a {
 }
 
 @media screen and (max-width: 620px) {
+    p {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+
+    h2 {
+        font-size: clamp(2rem, 2.5vw, 4rem);
+    }
+
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -133,6 +141,10 @@ body.dark-theme .topnav a {
         width: 80%;
     }
 
+    #rsvp-form iframe {
+        width: 100%;
+    }
+
 }
 
 .container {
@@ -141,7 +153,7 @@ body.dark-theme .topnav a {
 }
 
 img {
-    display: inline;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -155,13 +167,15 @@ img {
 
 #invitation .container img {
     padding-top: 2rem;
-    max-width: 900px;
+    max-width: 300px;
     width: 100%;
 }
 
 #dresscode .container img {
+    min-height: 500px;
     max-width: 800px;
     width: 100%;
+    object-fit: cover;
 }
 
 .blob-text {
@@ -190,6 +204,11 @@ img {
     transform: translate(-50%, -50%);
 }
 
+#rsvp-form iframe {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .credits {
     position: absolute;
     bottom: 0px;
@@ -199,9 +218,13 @@ img {
 }
 
 .section-padding {
-    padding-top: 1rem;
+    padding-top: 4rem;
 }
 
 ul {
     list-style-type: none;
+}
+
+footer {
+    margin: 5px;
 }
