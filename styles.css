@@ -1,28 +1,63 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
-    /*font-weight: 300;*/
+    margin: 0;
+    color: #333;
+    background-color: #f8f9fd;
+    font-size: 18px;
+}
+
+body .sun {
+    display: none;
+}
+
+body .moon {
+    display: block;
+}
+
+body.dark-theme {
     color: #f8f9fd;
     background-color: #333;
-    margin: 0;
+}
+
+body.dark-theme .sun {
+    display: block;
+}
+
+body.dark-theme .moon {
+    display: none;
 }
 
 span[lang=en] {
     display: none
 }
 
-.light {
+/*.light {
     display: none;
+}*/
+
+a:hover {
+    cursor: pointer;
 }
 
 p {
-    font-size: 15px;
-    line-height: 29px;
-    color: #f8f9fd;
-    padding-bottom: 20px
+    line-height: 150%;
 }
 
 h1 {
-    font-size: 60px
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
 }
 
 .topnav {
@@ -30,18 +65,27 @@ h1 {
     line-height: 1.5;
     position: fixed;
     top: 0;
-    width: 100%;
-    background: linear-gradient(#333 70%, rgba(255, 255, 255, 0))
+    width: inherit;
+    background: linear-gradient(#f8f9fd 70%, rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+
+body.dark-theme .topnav {
+    background: linear-gradient(#333 70%, rgba(255, 255, 255, 0));
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: #f8f9fd;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1rem;
+}
+
+body.dark-theme .topnav a {
+    color: #f8f9fd;
 }
 
 .topnav a.right {
@@ -80,9 +124,84 @@ h1 {
         display: block;
         text-align: left;
     }
+
+    section.section-padding {
+        padding-top: 2rem;
+    }
+
+    #map-frame {
+        width: 80%;
+    }
+
 }
 
 .container {
-    padding-top: 20px;
     text-align: center;
+    position: relative;
+}
+
+img {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top .container img {
+    width: 100%;
+    min-height: 300px;
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+#invitation .container img {
+    padding-top: 2rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+#dresscode .container img {
+    max-width: 800px;
+    width: 100%;
+}
+
+.blob-text {
+    color: #f8f9fd;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#blob {
+    background-image: radial-gradient(#333 25%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.credits {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 10px;
+    margin: 5px;
+}
+
+.section-padding {
+    padding-top: 1rem;
+}
+
+ul {
+    list-style-type: none;
 }
