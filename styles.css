@@ -179,6 +179,13 @@ img {
     object-fit: cover;
 }
 
+#seats .container img {
+    min-height: 500px;
+    max-width: 800px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .blob-text {
     color: #f8f9fd;
     position: absolute;
