@@ -186,6 +186,17 @@ img {
     object-fit: cover;
 }
 
+#seats-table {
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#seats-input {
+    height: 1.5rem;
+    width: 20rem;
+}
+
 .blob-text {
     color: #f8f9fd;
     position: absolute;
