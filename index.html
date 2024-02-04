@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Ana & João vão casar!</title>
-
 </head>
 
 <body>
@@ -18,10 +19,11 @@
             <div class="topnav" id="nav">
                 <a><span>A ❤️ J</span></a>
                 <a href="#invitation"><span>OMG</span></a>
-                <a href="#dresscode"><span>Dresscode</span></a>
                 <a href="#photos"><span lang="pt">Fotos</span><span lang="en">Photos</span></a>
                 <a href="#map" class="login"><span lang="pt">Local</span><span lang="en">Venue</span></a>
-                <a href="#rsvp"><span>RSVP</span></a>
+                <a href="#seats" class="login"><span lang="pt">Lugares</span><span lang="en">Seats</span></a>
+                <!-- <a href="#dresscode"><span>Dresscode</span></a> -->
+                <!-- <a href="#rsvp"><span>RSVP</span></a> -->
                 <a class="right" onClick="toggleLight(this)"><span class="moon">🌙</span><span class="sun">☀️</span></a>
                 <a class="right language" onClick="toggleLang()"><span lang="en">PT</span><span lang="pt">EN</span></a>
                 <a id="menu" href="javascript:void(0);" class="icon" onclick="menu()"><span><i
@@ -33,7 +35,10 @@
         <div class="container">
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Pavilh%C3%A3o_do_Conhecimento%2C_%C3%A1trio._Outubro_2017.jpg/2560px-Pavilh%C3%A3o_do_Conhecimento%2C_%C3%A1trio._Outubro_2017.jpg" />
-            <h1 class="center"><span lang="pt">Vamos casar!</span><span lang="en">We're getting married!</span></h1>
+            <h1 class="center">
+                <span lang="pt">Vamos casar!</span>
+                <span lang="en">We're getting married!</span>
+            </h1>
             <p class="credits"><a
                     href="https://commons.wikimedia.org/wiki/File:Pavilh%C3%A3o_do_Conhecimento,_%C3%A1trio._Outubro_2017.jpg">Rúdisicyon</a>,
                 <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
@@ -43,23 +48,98 @@
     <div id="content">
         <section id="invitation" class="section-padding">
             <div class="container">
-                <h2><span lang="pt">Já estava na hora, não é?</span><span lang="en">Kept you waiting
-                        hm?</span></h2>
-                <p><span lang="pt">Vem celebrar connosco a <b>10 de Fevereiro de 2024</b> no <b>Pavilhão do
+                <h2>
+                    <span lang="pt">Já estava na hora, não é?</span>
+                    <span lang="en">Kept you waiting, huh?</span>
+                </h2>
+                <p>
+                    <span lang="pt">Vem celebrar connosco a <b>10 de Fevereiro de 2024</b> no <b>Pavilhão do
                             Conhecimento</b> a partir das <b>11:30</b></span>
                     <span lang="en">Come celebrate with us on <b>February 10<sup>th</sup> 2024</b> at the
-                        <b>Pavilion of Knowledge</b> starting at <b>11:30</b></span>
+                        <b>Pavilion of Knowledge</b> starting at <b>11:30 AM</b></span>
                 </p>
-                <button class="calendar"><i class="fa fa-calendar"></i><a
+                <p>
+                    <span lang="pt" style="display: block;">12h00 - Cerimónia</span><span lang="en">12:00 PM -
+                        Cerimony</span>
+                    <span lang="pt" style="display: block;">13h00 - Almoço</span><span lang="en">1:00 PM - Lunch</span>
+                    <span lang="pt" style="display: block;">15h00 - Animação</span><span lang="en">3:00 PM -
+                        Entertainment</span>
+                    <span lang="pt" style="display: block;">19h00 - Fim</span><span lang="en">7:00 PM - The End</span>
+                </p>
+                <!-- <button class="calendar"><i class="fa fa-calendar"></i><a
                         href="https://calendar.google.com/calendar/r/eventedit?text=Casamento%20Ana%20%26%20Jo%C3%A3o&location=Pavilh%C3%A3o%20do%20Conhecimento%20-%20Ci%C3%AAncia%20Viva%2C%20Largo%20Jos%C3%A9%20Mariano%20Gago%20n%C2%BA1%2C%201990-073%20Lisboa%2C%20Portugal&dates=20240210T113000%2F20240210T183000&ctz=Europe%2FLisbon">
                         <span lang="pt"> Guardar no calendário</span><span lang="en"> Save to
-                            calendar</span></a></button>
+                            calendar</span></a></button> -->
                 <!--img id="flower-frame"
                     src="img/euclidean-vector-painting-flower-blue-vector-hand-painted-blue-flowers-5390e023fbbc0a3534d054889b19d44f.png"-->
             </div>
         </section>
 
-        <section id="dresscode" class="section-padding">
+        <section id="photos" class="section-padding">
+            <div class="container">
+                <h2>
+                    <span lang="pt">Ajuda-nos a capturar este momento!</span>
+                    <span lang="en">Help us capture the moment!</span>
+                </h2>
+                <p>
+                    <span lang="pt">Descarrega <a
+                            href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">aqui</a>
+                        a aplicação Wedshoots e usa o código PT5e0005a7</span>
+                    <span lang="en">Download <a href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">here</a>
+                        the Wedshoots
+                        app and use the code PT5e0005a7</span>
+                </p>
+            </div>
+        </section>
+
+        <section id="map" class="section-padding">
+            <div class="container">
+                <h2><span lang="pt">Como chegar lá?</span><span lang="en">How do I get there?</span></h2>
+                <p>
+                    <span lang="pt">É mais fácil do que pensas!</span>
+                    <span lang="en">It's way easier than you think!</span>
+                </p>
+                <p>
+                    <span lang="pt">A entrada é feita pela rampa do Pavilhão, através da bilheteira.</span>
+                    <span lang="en">The entrance is via the large ramp that leads to the ticket office.</span>
+                </p>
+                <p>
+                    <span lang="pt">Existe um elevador junto da entrada lateral do Pavilhão.</span>
+                    <span lang="en">There's an elevator by the Pavilion's side entrance.</span>
+                </p>
+                <p>
+                    <span lang="pt">Os parques de estacionamento mais próximos são no Casino Lisboa e na Doca.</span>
+                    <span lang="en">The closest parking lots are at Casino Lisboa and Doca, across the street.</span>
+                </p>
+                <div map-responsive>
+                    <iframe id="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.0628325503835!2d-9.098446923324353!3d38.76226285466518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19318919abdcad%3A0x168901727e8b67c8!2sPavilh%C3%A3o%20do%20Conhecimento%20-%20Ci%C3%AAncia%20Viva!5e0!3m2!1sen!2spt!4v1698621487460!5m2!1sen!2spt"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="seats" class="section-padding">
+            <div class="container">
+                <h2><span lang="pt">Lugares</span><span lang="en">Seats</span></h2>
+                <p>
+                    <span lang="pt">Procura o teu lugar</span>
+                    <span lang="en">Search for your seat</span>
+                </p>
+                <input type="text" id="seats-input" onkeyup="filter()" placeholder="" title="">
+                <table id="seats-table" style="display: none;">
+                    <tr class="header">
+                        <th>Nome</th>
+                        <th>Mesa</th>
+                    </tr>
+                </table>
+                <img id="seat-chart" src="img/seats.png">
+            </div>
+        </section>
+
+        <!-- <section id="dresscode" class="section-padding">
             <div class="container">
                 <img id="blob" src="img/space-8154941_1280.png">
                 <div class="blob-text">
@@ -77,38 +157,9 @@
                     </p>
                 </div>
             </div>
+        </section> -->
 
-        </section>
-
-        <section id="photos" class="section-padding">
-            <div class="container">
-                <h2><span lang="pt">Ajuda-nos a capturar este momento!</span><span lang="en">Help us capture the
-                        moment!</span></h2>
-                <p><span lang="pt">Descarrega <a href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">aqui</a>
-                        a
-                        aplicação Wedshoots e coloca o código PT5e0005a7</span><span lang="en">Download <a
-                            href="http://www.wedshoots.com/pt/download?albumId=PT5e0005a7">here</a> the Wedshoots
-                        app and input the code PT5e0005a7</span></p>
-            </div>
-        </section>
-
-        <section id="map" class="section-padding">
-            <div class="container">
-                <h2><span lang="pt">Como chegar lá?</span><span lang="en">How do I get there?</span></h2>
-                <p><span lang="pt">É mais fácil do que pensas!</span><span lang="en">It's way easier than you
-                        think!</span>
-                </p>
-                <div map-responsive>
-                    <iframe id="map-frame"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.0628325503835!2d-9.098446923324353!3d38.76226285466518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19318919abdcad%3A0x168901727e8b67c8!2sPavilh%C3%A3o%20do%20Conhecimento%20-%20Ci%C3%AAncia%20Viva!5e0!3m2!1sen!2spt!4v1698621487460!5m2!1sen!2spt"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="rsvp" class="section-padding">
+        <!-- <section id="rsvp" class="section-padding">
             <div class="container">
                 <h2><span lang="pt">Do que estás à espera?</span><span lang="en">What are you waiting for?</span></h2>
                 <p><span lang="pt">Por favor, confirma até 10 de Janeiro 2024</span><span lang="en">Please confirm
@@ -122,12 +173,13 @@
                         width="640" height="1170" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
-        </section>
+        </section> -->
         <footer>
             <p><span lang="pt">Feito com ❤️ por Ana e João</span><span lang="en">Made with ❤️ by Ana & João</span></p>
         </footer>
     </div>
 </body>
+
 <script src="scripts.js"></script>
 
 </html>
