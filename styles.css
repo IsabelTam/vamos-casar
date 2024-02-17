@@ -52,9 +52,13 @@ h2 {
     margin-bottom: 10px;
 }
 
-/*#content {
-    margin: 5px;
-}*/
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1024px;
+}
 
 nav {
     width: 100%;
@@ -66,13 +70,13 @@ nav {
     position: fixed;
     top: 0;
     width: inherit;
-    background: linear-gradient(#f8f9fd 70%, rgba(255, 255, 255, 0));
+    background: linear-gradient(#f8f9fd 80%, rgba(255, 255, 255, 0));
     z-index: 1;
     /* padding: 5px; */
 }
 
 body.dark-theme .topnav {
-    background: linear-gradient(#333 70%, rgba(255, 255, 255, 0));
+    background: linear-gradient(#333 80%, rgba(255, 255, 255, 0));
 }
 
 .topnav a {
@@ -167,9 +171,10 @@ img {
 }
 
 #invitation .container img {
-    padding-top: 2rem;
+    margin-top: 2rem;
     max-width: 300px;
     width: 100%;
+    border-radius: 10%;
 }
 
 #dresscode .container img {
@@ -240,10 +245,15 @@ img {
     padding-top: 4rem;
 }
 
+.list {
+    display: inline-block;
+    text-align: left;
+}
+
 ul {
     list-style-type: none;
 }
 
 footer {
-    margin: 5px;
+    margin: 10px;
 }
